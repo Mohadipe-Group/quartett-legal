@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutzerklärung & Impressum – Quartett Master</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --border: #e2e8f0;
+      --tag-bg: #eff6ff;
+      --tag-text: #1d4ed8;
+      --radius: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --card-bg: #1e293b;
+        --text: #f8fafc;
+        --text-muted: #94a3b8;
+        --primary: #3b82f6;
+        --primary-hover: #60a5fa;
+        --border: #334155;
+        --tag-bg: #1e3a8a;
+        --tag-text: #93c5fd;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 24px 16px 64px 16px;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .app-badge {
+      display: inline-block;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .tab-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .tab-btn.active, .tab-btn:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 640px) {
+      .card {
+        padding: 24px 18px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 14px;
+    }
+
+    ul, ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .highlight-box {
+      background: var(--tag-bg);
+      border-left: 4px solid var(--primary);
+      color: var(--text);
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 18px 0;
+      font-size: 0.95rem;
+    }
+
+    .highlight-box strong {
+      color: var(--tag-text);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="app-badge">🎮 Quartett Master – Supertrumpf</div>
+      <h1>Datenschutzerklärung</h1>
+      <p class="subtitle">Informationen zur Verarbeitung personenbezogener Daten (DSGVO) &bull; Stand: September 2026</p>
+    </header>
+
+    <div class="nav-tabs">
+      <a href="#datenschutz" class="tab-btn active" id="btn-datenschutz" onclick="showTab('datenschutz')">Datenschutzerklärung</a>
+      <a href="#impressum" class="tab-btn" id="btn-impressum" onclick="showTab('impressum')">Impressum (§ 5 DDG)</a>
+    </div>
+
+    <!-- DATENSCHUTZ TAB -->
+    <main class="card" id="section-datenschutz">
+      <h2>1. Verantwortlicher für die Datenverarbeitung</h2>
+      <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
+      <p>
+        <strong>Sven Schäfer</strong><br>
+        Quartett Master Software-Entwicklung<br>
+        E-Mail: <a href="mailto:kontakt@mohadipe.de">kontakt@mohadipe.de</a><br>
+        Web: <a href="https://github.com/mohadipe/quartett-project-repo" target="_blank" rel="noopener">Quartett Master Projekt</a>
+      </p>
+
+      <h2>2. Grundsätze der Datenverarbeitung (Privacy by Design)</h2>
+      <p>Der Schutz Ihrer Privatsphäre ist elementarer Bestandteil unserer Software-Architektur:</p>
+      <div class="highlight-box">
+        <strong>🛡️ Privacy by Design in Quartett Master:</strong>
+        <ul style="margin-top: 8px; margin-bottom: 0;">
+          <li><strong>Anonymer Gast-Modus:</strong> Keine Registrierungspflicht mit Klarnamen, Handynummer oder E-Mail.</li>
+          <li><strong>Null Werbetracker:</strong> Keine Integration von Werbenetzwerken (kein Google AdMob, kein Facebook SDK).</li>
+          <li><strong>Kein Freitext-Chat:</strong> Ausschließlich kindgerechte, vordefinierte Emojis zur Kommunikation im Duell.</li>
+          <li><strong>EU-Serverstandort:</strong> Unsere Cloud-Datenbank wird in Frankfurt am Main (Deutschland) gehostet.</li>
+        </ul>
+      </div>
+
+      <h2>3. Erfasste Daten & Zwecke</h2>
+
+      <h3>3.1 Spieldaten & Online-Duelle (Art. 6 Abs. 1 lit. b DSGVO)</h3>
+      <p>Zur Bereitstellung des Spiels und zur Ermöglichung von Online-Multiplayer-Duellen verarbeiten wir:</p>
+      <ul>
+        <li><strong>Zufällige Benutzer-ID (UUID):</strong> Technischer Schlüssel zur Zuordnung Ihres Spielfortschritts.</li>
+        <li><strong>Spielername (Pseudonym) & Avatar:</strong> Frei wählbarer Anzeigename und Profil-Icon.</li>
+        <li><strong>Spielstatistiken:</strong> Level, Erfahrungspunkte (XP), erspielte Münzen (Coins), Elo-Wertung sowie Siege/Niederlagen.</li>
+        <li><strong>Duell-Informationen:</strong> Raum-Codes für private Duelle, gespielte Karten und Rundenergebnisse.</li>
+      </ul>
+
+      <h3>3.2 Erforderliche Berechtigungen</h3>
+      <p>Die App fordert ausschließlich folgende Netzwerk-Berechtigungen an:</p>
+      <ul>
+        <li><code>android.permission.INTERNET</code>: Zur Synchronisation der Spieldaten und Multiplayer-Duelle.</li>
+        <li><code>android.permission.ACCESS_NETWORK_STATE</code>: Zur Erkennung von Offline-/Online-Zuständen.</li>
+      </ul>
+      <p>Es werden <strong>keine</strong> sensiblen Berechtigungen angefordert (kein Zugriff auf Standort/GPS, Adressbuch, Kamera, Mikrofon oder private Gerätespeicher).</p>
+
+      <h3>3.3 Fehleranalyse via Sentry (Art. 6 Abs. 1 lit. f DSGVO)</h3>
+      <p>Zur Sicherstellung der Stabilität und schnellen Behebung technischer Abstürze setzen wir den Dienst <strong>Sentry</strong> ein (Functional Software, Inc., San Francisco, USA):</p>
+      <ul>
+        <li>Erfasst werden technische Daten: Gerätemodell, Betriebssystem-Version, App-Version und der Programmcode-Stacktrace beim Absturz.</li>
+        <li>IP-Adressen werden vor der Speicherung automatisch anonymisiert/gekürzt.</li>
+        <li><strong>Widerspruchsrecht (Opt-Out):</strong> Sie können das Senden von Fehlerberichten jederzeit in der App unter <em>„Einstellungen ➔ Fehlerberichte senden“</em> deaktivieren.</li>
+      </ul>
+
+      <h3>3.4 Optionale In-App-Käufe via Google Play (Art. 6 Abs. 1 lit. b DSGVO)</h3>
+      <p>Erwerben Sie optionale Kartendecks oder Inhalte über den Google Play Store:</p>
+      <ul>
+        <li>Die Transaktion und Abrechnung erfolgt vollständig über Google Ireland Limited.</li>
+        <li>Wir erhalten zu keinem Zeitpunkt Einblick in Ihre Zahlungs- oder Kreditkartendaten. Google übermittelt unserer App lediglich ein Bestätigungs-Token zur Freischaltung des Inhalts.</li>
+      </ul>
+
+      <h2>4. Auftragsverarbeiter & Drittanbieter</h2>
+      <p>Wir arbeiten mit sorgfältig ausgewählten Dienstleistern auf Basis von Auftragsverarbeitungsverträgen (Art. 28 DSGVO) zusammen:</p>
+      <ul>
+        <li><strong>Supabase Inc.:</strong> Datenbank- & Authentifizierungs-Infrastruktur mit Server-Standort Frankfurt am Main (Deutschland / AWS Region eu-central-1). Verschlüsselung via TLS 1.3 / HTTPS.</li>
+        <li><strong>Sentry (Functional Software, Inc.):</strong> Stabilitäts- und Crash-Monitoring auf Basis von EU-Standardvertragsklauseln (SCC).</li>
+        <li><strong>Google Play Store (Google Ireland Limited):</strong> App-Auslieferung und Kaufabwicklung.</li>
+      </ul>
+
+      <h2>5. Löschung des Benutzerkontos (Art. 17 DSGVO)</h2>
+      <p>Sie haben das Recht auf vollständige und dauerhafte Löschung Ihrer Daten. Hierfür stellt die App eine automatisierte Self-Service-Funktion bereit:</p>
+      <p>In der App unter <strong>„Einstellungen ➔ Konto und Spieldaten unwiderruflich löschen“</strong> können Sie Ihr Spielerprofil jederzeit mit sofortiger Wirkung rückstandslos aus unserer Datenbank entfernen.</p>
+
+      <h2>6. Ihre Rechte nach der DSGVO</h2>
+      <p>Ihnen stehen folgende gesetzliche Betroffenenrechte zu:</p>
+      <ul>
+        <li><strong>Auskunft (Art. 15 DSGVO):</strong> Sie können jederzeit Auskunft über Ihre gespeicherten Daten verlangen.</li>
+        <li><strong>Datenübertragbarkeit (Art. 20 DSGVO):</strong> Über die App-Einstellungen können Sie alle Profildaten als maschinenlesbaren JSON-Export exportieren.</li>
+        <li><strong>Berichtigung (Art. 16 DSGVO) & Löschung (Art. 17 DSGVO).</strong></li>
+        <li><strong>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO):</strong> Z. B. über den Sentry-Opt-Out Schalter.</li>
+        <li><strong>Beschwerderecht bei einer Aufsichtsbehörde (Art. 77 DSGVO):</strong> Sie können sich an die für Sie zuständige Landesdatenschutzbehörde wenden.</li>
+      </ul>
+
+      <h2>7. Kinder- und Jugendschutz</h2>
+      <p>Die App richtet sich an ein allgemeines Publikum aller Altersgruppen (USK 0 / PEGI 3). Wir erheben wissentlich keine personenbezogenen Daten von Kindern. Aufgrund des Verzichts auf freie Texteingaben im Mehrspielermodus ist die Weitergabe privater Daten wirksam unterbunden.</p>
+
+      <h2>8. Kontakt bei Datenschutzfragen</h2>
+      <p>Bei Fragen zum Datenschutz erreichen Sie uns jederzeit per E-Mail unter: <a href="mailto:kontakt@mohadipe.de">kontakt@mohadipe.de</a>.</p>
+    </main>
+
+    <!-- IMPRESSUM TAB -->
+    <main class="card" id="section-impressum" style="display: none;">
+      <h2>Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)</h2>
+      <p>
+        <strong>Sven Schäfer</strong><br>
+        Quartett Master Software-Entwicklung<br>
+        E-Mail: <a href="mailto:kontakt@mohadipe.de">kontakt@mohadipe.de</a><br>
+        Website: <a href="https://github.com/mohadipe/quartett-project-repo" target="_blank" rel="noopener">Quartett Master Projekt</a>
+      </p>
+
+      <h2>Kontakt & Support</h2>
+      <p>Bei Support-Fragen, Anregungen oder Feedback zur App erreichen Sie uns per E-Mail unter:<br>
+      <strong>kontakt@mohadipe.de</strong></p>
+
+      <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+      <p>Sven Schäfer, E-Mail: kontakt@mohadipe.de</p>
+
+      <h2>EU-Streitschlichtung</h2>
+      <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a>.<br>
+      Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+      <h2>Haftung für Inhalte & Urheberrecht</h2>
+      <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Alle im Spiel „Quartett Master“ verwendeten Bild- und Textdaten stammen aus gemeinfreien Quellen (Public Domain / CC0), unterliegen freien Lizenzen oder wurden eigens erstellt. Sollten Sie dennoch auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis.</p>
+    </main>
+
+    <footer>
+      &copy; 2026 Sven Schäfer &bull; Quartett Master &bull; Alle Rechte vorbehalten.
+    </footer>
+  </div>
+
+  <script>
+    function showTab(tab) {
+      const secDatenschutz = document.getElementById('section-datenschutz');
+      const secImpressum = document.getElementById('section-impressum');
+      const btnDatenschutz = document.getElementById('btn-datenschutz');
+      const btnImpressum = document.getElementById('btn-impressum');
+
+      if (tab === 'impressum') {
+        secDatenschutz.style.display = 'none';
+        secImpressum.style.display = 'block';
+        btnDatenschutz.classList.remove('active');
+        btnImpressum.classList.add('active');
+      } else {
+        secDatenschutz.style.display = 'block';
+        secImpressum.style.display = 'none';
+        btnDatenschutz.classList.add('active');
+        btnImpressum.classList.remove('active');
+      }
+    }
+
+    // Handle URL hash on load
+    window.addEventListener('load', () => {
+      if (window.location.hash === '#impressum') {
+        showTab('impressum');
+      }
+    });
+  </script>
+</body>
+</html>

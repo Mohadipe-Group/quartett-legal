@@ -4,20 +4,20 @@
 
 **Sven Schäfer**  
 *Quartett Master Software-Entwicklung*  
-E-Mail: [kontakt@mohadipe.de](mailto:kontakt@mohadipe.de) *(oder github@mohadipe.de)*  
+E-Mail: [kontakt@sl.mohadipe.de](mailto:kontakt@sl.mohadipe.de) *(oder github@mohadipe.de)*  
 Website: [https://github.com/mohadipe/quartett-project-repo](https://github.com/mohadipe/quartett-project-repo)  
 
 ---
 
 ## Kontakt
 Bei Fragen, Feedback oder Support-Anfragen zum Spiel erreichen Sie uns unter:  
-E-Mail: **kontakt@mohadipe.de**
+E-Mail: **kontakt@sl.mohadipe.de**
 
 ---
 
 ## Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
 Sven Schäfer  
-E-Mail: kontakt@mohadipe.de  
+E-Mail: kontakt@sl.mohadipe.de  
 
 ---
 

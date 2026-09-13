@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konto- und Datenlöschung – Quartett Master</title>
+  <link rel="icon" type="image/png" href="assets/app_logo.png">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --danger: #ef4444;
+      --danger-hover: #dc2626;
+      --border: #e2e8f0;
+      --tag-bg: #eff6ff;
+      --tag-text: #1d4ed8;
+      --radius: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --card-bg: #1e293b;
+        --text: #f8fafc;
+        --text-muted: #94a3b8;
+        --primary: #3b82f6;
+        --primary-hover: #60a5fa;
+        --danger: #f87171;
+        --danger-hover: #ef4444;
+        --border: #334155;
+        --tag-bg: #1e3a8a;
+        --tag-text: #93c5fd;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 24px 16px 64px 16px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .app-badge {
+      display: inline-block;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 640px) {
+      .card {
+        padding: 24px 18px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 14px;
+    }
+
+    ul, ol {
+      margin-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .box-info {
+      background: rgba(37, 99, 235, 0.08);
+      border-left: 4px solid var(--primary);
+      padding: 16px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn-danger {
+      background-color: var(--danger);
+      color: #ffffff;
+    }
+
+    .btn-danger:hover {
+      background-color: var(--danger-hover);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="app-badge">Quartett Master – Supertrumpf</div>
+      <h1>Löschung von Benutzerkonto & Daten</h1>
+      <p class="subtitle">Informationen und Antrag zur dauerhaften Kontolöschung gemäß Google Play Richtlinien & Art. 17 DSGVO</p>
+    </header>
+
+    <div class="card">
+      <div class="box-info">
+        <strong>Vollständige Transparenz:</strong> Sie haben jederzeit das Recht, Ihr Benutzerkonto und alle mit Ihrem Profil verknüpften Spieldaten dauerhaft und unwiderruflich löschen zu lassen.
+      </div>
+
+      <h2>1. Löschung direkt in der App (Sofortige Ausführung)</h2>
+      <p>Wenn Sie die App auf Ihrem Gerät installiert haben, können Sie Ihr Konto selbstständig in Echtzeit löschen:</p>
+      <ol>
+        <li>Öffnen Sie die <strong>Quartett Master</strong> App.</li>
+        <li>Tippen Sie auf das <strong>Zahnrad-Symbol (Einstellungen)</strong> oben rechts.</li>
+        <li>Wählen Sie den Menüpunkt <strong>„Konto und Spieldaten unwiderruflich löschen“</strong>.</li>
+        <li>Bestätigen Sie die Sicherheitsabfrage. Ihr Konto und alle Daten werden sofort aus unserer Datenbank entfernt.</li>
+      </ol>
+
+      <h2>2. Löschung per Web-Antrag (Ohne installierte App)</h2>
+      <p>Falls Sie die App deinstalliert haben oder keinen Zugriff mehr auf Ihr Gerät haben, können Sie die Löschung formlos per E-Mail bei uns beantragen:</p>
+      
+      <p style="margin-top: 20px;">
+        <a href="mailto:kontakt@mohadipe.de?subject=Quartett%20Master%20-%20Antrag%20auf%20Kontol%C3%B6schung&body=Hallo%20Sven,%0D%0A%0D%0Abitte%20l%C3%B6schen%20Sie%20mein%20Benutzerkonto%20und%20alle%20damit%20verbundenen%20Daten%20in%20der%20Quartett%20Master%20App%20unwiderruflich.%0D%0A%0D%0AMeine%20registrierte%20E-Mail-Adresse%20lautet:%20%0D%0AMein%20Spielername%20/%20UUID%20(falls%20bekannt):%20%0D%0A%0D%0AVielen%20Dank!" class="btn btn-danger">
+          🗑️ Kontolöschung per E-Mail beantragen
+        </a>
+      </p>
+
+      <p style="margin-top: 14px; font-size: 0.9rem; color: var(--text-muted);">
+        Alternativ senden Sie eine E-Mail an <strong>kontakt@mohadipe.de</strong> mit dem Betreff <em>„Quartett Master - Antrag auf Kontolöschung“</em> und nennen Sie die E-Mail-Adresse, mit der Sie sich in der App registriert haben.
+      </p>
+
+      <h2>3. Welche Daten werden gelöscht?</h2>
+      <p>Bei der Kontolöschung werden folgende Daten vollständig und unwiderruflich aus der Datenbank entfernt:</p>
+      <ul>
+        <li><strong>Anmeldedaten:</strong> E-Mail-Adresse, Passwort-Hash, OAuth-Verknüpfungen (z. B. Google-Konto-ID).</li>
+        <li><strong>Profil- und Benutzerdaten:</strong> Benutzer-ID (UUID), Spielername, Avatar-Icon.</li>
+        <li><strong>Spielfortschritt & Statistiken:</strong> Erreichte Level, Erfahrungspunkte (XP), erspielte Münzen (Coins), Ranglistenwertungen (Elo), Siege/Niederlagen.</li>
+        <li><strong>Inventar:</strong> Sämtliche freigeschalteten Decks und Match-Historien.</li>
+      </ul>
+
+      <h2>4. Welche Daten werden aufbewahrt?</h2>
+      <p>
+        <strong>Keine personenbezogenen Daten.</strong> Es werden keine Restdaten aufbewahrt. Anonymisierte Fehlerberichte (ohne Personenbezug oder Benutzerkennung) im Rahmen von Sentry verfallen automatisch nach 90 Tagen.
+      </p>
+
+      <h2>5. Bearbeitungszeit</h2>
+      <ul>
+        <li><strong>In der App:</strong> Die Löschung erfolgt <strong>sofort</strong> (Echtzeit).</li>
+        <li><strong>Per E-Mail:</strong> E-Mail-Anfragen werden nach Prüfung der Inhaberschaft innerhalb von <strong>maximal 48 Stunden</strong> vollständig ausgeführt. Sie erhalten nach erfolgreicher Löschung eine Bestätigung.</li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>
+        <a href="index.html">Datenschutzerklärung</a> •
+        <a href="impressum.html">Impressum</a> •
+        <a href="tester.html">Tester-Bereich</a>
+      </p>
+      <p style="margin-top: 8px;">© 2026 Sven Schäfer – Quartett Master</p>
+    </footer>
+  </div>
+
+</body>
+</html>

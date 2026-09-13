@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quartett Master – Druckvorlage Tester-Flyer (DIN A5)</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1e3a8a;
+      --navy: #0f172a;
+      --slate: #334155;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --accent-gold: #d97706;
+      --accent-green: #16a34a;
+      --tag-bg: #eff6ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #cbd5e1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      padding: 24px 0;
+    }
+
+    /* DIN A5 dimensions: 148mm x 210mm */
+    .page {
+      width: 148mm;
+      min-height: 210mm;
+      height: 210mm;
+      background: var(--bg);
+      padding: 10mm 10mm 8mm 10mm;
+      position: relative;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @page {
+      size: A5 portrait;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        background: transparent;
+        padding: 0;
+        gap: 0;
+      }
+      .page {
+        box-shadow: none;
+        page-break-after: always;
+        break-after: page;
+        height: 210mm;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+
+    .top-stripe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--primary);
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .app-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .pill-badge {
+      display: inline-block;
+      background: var(--tag-bg);
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      font-size: 8pt;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 9999px;
+      margin-bottom: 2px;
+    }
+
+    .header-sub {
+      font-size: 8pt;
+      color: var(--muted);
+    }
+
+    .hero-title {
+      font-size: 14pt;
+      line-height: 1.25;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .hero-title span {
+      color: var(--primary);
+    }
+
+    .hero-desc {
+      font-size: 8.5pt;
+      color: var(--slate);
+      margin-bottom: 12px;
+      line-height: 1.35;
+    }
+
+    /* Grid of 4 features */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 10px;
+      border-left: 3.5px solid var(--primary);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .feature-card h4 {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .feature-card .subtitle {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 3px;
+    }
+
+    .feature-card p {
+      font-size: 7pt;
+      color: var(--slate);
+      line-height: 1.35;
+      word-break: normal;
+      hyphens: auto;
+    }
+
+    /* Showcase */
+    .section-label {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .deck-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .deck-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+
+    .deck-card img {
+      width: 100%;
+      height: 60px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .deck-meta {
+      padding: 6px;
+    }
+
+    .deck-title {
+      font-size: 8pt;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .deck-car {
+      font-size: 7pt;
+      color: var(--muted);
+    }
+
+    .deck-stat {
+      font-size: 6.8pt;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-top: 2px;
+    }
+
+    /* Bottom Banner */
+    .cta-banner {
+      margin-top: auto;
+      background: var(--primary);
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 8px 12px;
+      text-align: center;
+    }
+
+    .cta-banner h3 {
+      font-size: 9.5pt;
+      font-weight: 800;
+    }
+
+    .cta-banner p {
+      font-size: 7.5pt;
+      opacity: 0.9;
+      margin-top: 2px;
+    }
+
+    /* BACK PAGE */
+    .back-header {
+      margin-bottom: 10px;
+    }
+
+    .back-title {
+      font-size: 13.5pt;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .back-sub {
+      font-size: 8.5pt;
+      color: var(--slate);
+    }
+
+    .steps-container {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 12px;
+    }
+
+    .step-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .step-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--tag-bg);
+      color: var(--primary);
+      border: 1.5px solid var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9.5pt;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-num.green {
+      background: #f0fdf4;
+      color: var(--accent-green);
+      border-color: var(--accent-green);
+    }
+
+    .step-num.gold {
+      background: #fef3c7;
+      color: var(--accent-gold);
+      border-color: var(--accent-gold);
+    }
+
+    .step-body h4 {
+      font-size: 9pt;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    .step-body p {
+      font-size: 7.5pt;
+      color: var(--slate);
+      line-height: 1.35;
+    }
+
+    .step-body .hint {
+      font-size: 7pt;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 2px;
+    }
+
+    .qr-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .qr-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .qr-card img {
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 4px auto;
+      display: block;
+    }
+
+    .qr-card h5 {
+      font-size: 8pt;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .qr-card p {
+      font-size: 6.8pt;
+      color: var(--muted);
+    }
+
+    .qr-card a {
+      font-size: 6.2pt;
+      color: var(--primary);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .contact-box {
+      background: var(--card-bg);
+      border: 1.5px solid var(--primary);
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-top: auto;
+      margin-bottom: 8px;
+    }
+
+    .contact-box h5 {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 2px;
+    }
+
+    .contact-box p {
+      font-size: 7.5pt;
+      color: var(--slate);
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 6.8pt;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .print-controls {
+      background: white;
+      padding: 12px 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-print {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn-print:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-controls no-print">
+    <span><strong>Quartett Master Flyer:</strong> Druckfertige DIN A5 Vorlage (Vorder- & Rückseite).</span>
+    <button class="btn-print" onclick="window.print()">🖨️ Jetzt Drucken (Ctrl+P)</button>
+    <a href="flyer_a5_druckvorlage.pdf" download style="color: var(--primary); font-size: 14px; font-weight: 600;">📥 PDF herunterladen</a>
+  </div>
+
+  <!-- SEITE 1: VORDERSEITE -->
+  <div class="page">
+    <div class="top-stripe"></div>
+
+    <div class="header-row">
+      <img src="assets/app_logo.png" alt="Quartett Master Logo" class="app-icon">
+      <div>
+        <div class="pill-badge">QUARTETT MASTER  •  SUPERTRUMPF</div>
+        <div class="header-sub">Klassische Kartenduelle modern interpretiert • Closed Beta</div>
+      </div>
+    </div>
+
+    <h1 class="hero-title">
+      Das Quartett-Gefühl aus unserer Kindheit –<br>
+      <span>jetzt modern auf deinem Smartphone!</span>
+    </h1>
+    <p class="hero-desc">
+      Klassischer Supertrumpf mit echten Daten, fairen Werten und garantiert ohne nervige Werbeunterbrechungen.
+    </p>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h4>🏎️ Klassischer Supertrumpf</h4>
+        <div class="subtitle">Höhere Werte stechen!</div>
+        <p>PS, Hubraum, Tempo & Co. Schnelle Duelle wie damals auf dem Schulhof.</p>
+      </div>
+
+      <div class="feature-card">
+        <h4>🤖 Solo gegen clevere Bots</h4>
+        <div class="subtitle">100% offline spielbar</div>
+        <p>Kein Internet nötig! Perfekt für Bus, Bahn, Flugzeug oder gemütlich auf der Couch.</p>
+      </div>
+
+      <div class="feature-card">
+        <h4>🦋 Vielfältige Kartendecks</h4>
+        <div class="subtitle">Echte Motive & Fakten</div>
+        <p>Von 1.000-PS-Supercars über Feuerwehr-Großlöscher bis zu bunten Schmetterlingen.</p>
+      </div>
+
+      <div class="feature-card">
+        <h4>🛡️ Fair & ohne Werbefallen</h4>
+        <div class="subtitle">100% reiner Spielspaß</div>
+        <p>Garantiert keine Werbeunterbrechungen mitten im Spiel und kein Pay-to-Win-Zwang.</p>
+      </div>
+    </div>
+
+    <div class="section-label">Entdecke die ersten Starter-Decks:</div>
+    <div class="deck-row">
+      <div class="deck-card">
+        <img src="assets/deck_supercar_gt3rs.jpg" alt="Porsche 911 GT3 RS">
+        <div class="deck-meta">
+          <div class="deck-title">🏎️ Supercars</div>
+          <div class="deck-car">Porsche 911 GT3 RS</div>
+          <div class="deck-stat">525 PS • 296 km/h</div>
+        </div>
+      </div>
+
+      <div class="deck-card">
+        <img src="assets/deck_feuerwehr_panther.jpg" alt="Flughafenlöscher Panther">
+        <div class="deck-meta">
+          <div class="deck-title">🚒 Feuerwehr</div>
+          <div class="deck-car">Panther 8x8 Großlöscher</div>
+          <div class="deck-stat">1.400 PS • 52 t</div>
+        </div>
+      </div>
+
+      <div class="deck-card">
+        <img src="assets/deck_butterfly_schwalbenschwanz.jpg" alt="Schwalbenschwanz">
+        <div class="deck-meta">
+          <div class="deck-title">🦋 Schmetterlinge</div>
+          <div class="deck-car">Schwalbenschwanz</div>
+          <div class="deck-stat">90 mm Spannweite</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-banner">
+      <h3>Werde exklusiver Vorab-Tester und gestalte das Spiel mit!</h3>
+      <p>Kostenlos • Für Android • 3-Schritte-Anleitung auf der Rückseite ➔</p>
+    </div>
+  </div>
+
+  <!-- SEITE 2: RÜCKSEITE -->
+  <div class="page">
+    <div class="top-stripe"></div>
+
+    <div class="back-header">
+      <h2 class="back-title">In 3 einfachen Schritten zum Tester werden</h2>
+      <p class="back-sub">Unterstütze Sven (@mohadipe) beim offiziellen 14-tägigen Closed Beta Test für Google Play.</p>
+    </div>
+
+    <div class="steps-container">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Google-Mail kurz an Sven senden</h4>
+          <p>Sende mir per WhatsApp, Signal oder E-Mail kurz deine Google-Mailadresse.</p>
+          <div class="hint">Hinweis: Google Play schaltet den Test nur für vorab freigegebene Konten frei.</div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num green">2</div>
+        <div class="step-body">
+          <h4>Einladungslink antippen & teilnehmen</h4>
+          <p>Scanne den linken QR-Code oder öffne den Link direkt im Smartphone-Browser.</p>
+          <p>Tippe auf der Google-Play-Seite einfach auf den Button: <strong>„Am Test teilnehmen“</strong>.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num gold">3</div>
+        <div class="step-body">
+          <h4>App installieren & losspielen!</h4>
+          <p>Lade die App im Play Store herunter und spiele über 14 Tage hinweg regelmäßig.</p>
+          <div class="hint">Feedback: Was macht Spaß? Welche Decks fehlen noch? Gibt es Darstellungsfehler?</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-label">Direkte Einstiegs-Links (QR-Codes):</div>
+    <div class="qr-row">
+      <div class="qr-card">
+        <img src="assets/qr_playstore_testing.png" alt="QR-Code Google Play Testlink">
+        <h5>Google Play Store</h5>
+        <p>Closed Testing Opt-in</p>
+        <a href="https://play.google.com/apps/testing/de.quartett.app.quartett_app">play.google.com/apps/testing/...</a>
+      </div>
+
+      <div class="qr-card">
+        <img src="assets/qr_tester_landingpage.png" alt="QR-Code Tester Info-Seite">
+        <h5>Digitale Info-Seite</h5>
+        <p>Screenshots & FAQ</p>
+        <a href="https://mohadipe.github.io/quartett-legal/tester.html">mohadipe.github.io/quartett-legal/...</a>
+      </div>
+    </div>
+
+    <div class="contact-box">
+      <h5>Feedback & direkter Kontakt:</h5>
+      <p>Schreib Sven jederzeit direkt per WhatsApp, Signal oder per E-Mail an <strong>kontakt@mohadipe.de</strong></p>
+    </div>
+
+    <div class="footer-note">
+      Ein privates Hobby-Projekt von Sven Schäfer (@mohadipe) • 100% DSGVO-konform, keine Werbetracker.<br>
+      Datenschutzerklärung & Impressum: <a href="https://mohadipe.github.io/quartett-legal/" style="color: var(--primary);">https://mohadipe.github.io/quartett-legal/</a>
+    </div>
+  </div>
+
+</body>
+</html>

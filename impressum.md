@@ -5,7 +5,7 @@
 **Sven Schäfer**  
 *Quartett Master Software-Entwicklung*  
 E-Mail: [kontakt@sl.mohadipe.de](mailto:kontakt@sl.mohadipe.de) *(oder github@mohadipe.de)*  
-Website: [https://github.com/mohadipe/quartett-project-repo](https://github.com/mohadipe/quartett-project-repo)  
+Website: [https://github.com/Mohadipe-Group/quartett-project-repo](https://github.com/Mohadipe-Group/quartett-project-repo)  
 
 ---
 

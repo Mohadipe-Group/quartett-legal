@@ -5,11 +5,11 @@ Dieses Repository enthält die offiziellen, öffentlich zugänglichen rechtliche
 ## 🌐 Live-URLs für Google Play Console & Web
 
 * 🛡️ **Datenschutzerklärung (Privacy Policy):**  
-  👉 **[https://mohadipe.github.io/quartett-legal/](https://mohadipe.github.io/quartett-legal/)**  
-  *(oder `https://mohadipe.github.io/quartett-legal/privacy.html`)*
+  👉 **[https://mohadipe-group.github.io/quartett-legal/](https://mohadipe-group.github.io/quartett-legal/)**  
+  *(oder `https://mohadipe-group.github.io/quartett-legal/privacy.html`)*
 
 * ⚖️ **Impressum (§ 5 DDG):**  
-  👉 **[https://mohadipe.github.io/quartett-legal/impressum.html](https://mohadipe.github.io/quartett-legal/impressum.html)**
+  👉 **[https://mohadipe-group.github.io/quartett-legal/impressum.html](https://mohadipe-group.github.io/quartett-legal/impressum.html)**
 
 ---
 

@@ -4,8 +4,18 @@
 
 **Sven Schäfer**  
 *Quartett Master Software-Entwicklung*  
+Thüringer Str. 6  
+90579 Langenzenn  
+Deutschland  
+
 E-Mail: [kontakt@sl.mohadipe.de](mailto:kontakt@sl.mohadipe.de) *(oder github@mohadipe.de)*  
 Website: [https://github.com/Mohadipe-Group/quartett-project-repo](https://github.com/Mohadipe-Group/quartett-project-repo)  
+
+---
+
+## Umsatzsteuer-ID
+Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:  
+**DE...** *(Bitte hier die 9 Ziffern deiner USt-IdNr. einsetzen)*
 
 ---
 
@@ -17,6 +27,8 @@ E-Mail: **kontakt@sl.mohadipe.de**
 
 ## Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
 Sven Schäfer  
+Thüringer Str. 6  
+90579 Langenzenn  
 E-Mail: kontakt@sl.mohadipe.de  
 
 ---

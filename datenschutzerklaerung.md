@@ -10,6 +10,11 @@
 Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze ist:
 
 **Sven Schäfer**  
+*Quartett Master Software-Entwicklung*  
+Thüringer Str. 6  
+90579 Langenzenn  
+Deutschland  
+
 E-Mail: [kontakt@sl.mohadipe.de](mailto:kontakt@sl.mohadipe.de) *(oder github@mohadipe.de)*  
 Website: [https://github.com/Mohadipe-Group/quartett-project-repo](https://github.com/Mohadipe-Group/quartett-project-repo)  
 

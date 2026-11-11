@@ -15,7 +15,7 @@ Website: [https://github.com/Mohadipe-Group/quartett-project-repo](https://githu
 
 ## Umsatzsteuer-ID
 Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:  
-**DE...** *(Bitte hier die 9 Ziffern deiner USt-IdNr. einsetzen)*
+**DE466379873**
 
 ---
 
